@@ -1,0 +1,23 @@
+{
+  "name": "daw-i-g4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "lite-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/david-fgdl/DAW-I-G4.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/david-fgdl/DAW-I-G4/issues"
+  },
+  "homepage": "https://github.com/david-fgdl/DAW-I-G4#readme",
+  "devDependencies": {
+    "lite-server": "^2.5.4"
+  }
+}
