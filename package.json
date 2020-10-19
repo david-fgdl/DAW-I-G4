@@ -2,7 +2,7 @@
   "name": "daw-i-g4",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "inicio.html",
   "scripts": {
     "dev": "lite-server",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,5 +19,10 @@
   "homepage": "https://github.com/david-fgdl/DAW-I-G4#readme",
   "devDependencies": {
     "lite-server": "^2.5.4"
+  },
+  "dependencies": {
+    "bootstrap": "file:bootstrap",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1"
   }
 }

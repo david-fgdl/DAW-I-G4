@@ -4,7 +4,9 @@
     <e p="C:\Users\angel\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
     <e p="C:\Users\angel\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_.19.00" t="ExcludeRecursive" />
     <e p="C:\Users\angel\Desktop\DAW\PROYECTO\DAW-I-G4" t="IncludeFlat">
+      <e p="node_modules\jquery" t="IncludeRecursive" />
       <e p="node_modules\lite-server" t="IncludeRecursive" />
+      <e p="node_modules\popper.js" t="IncludeRecursive" />
     </e>
   </component>
 </project>
