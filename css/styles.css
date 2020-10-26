@@ -1,13 +1,19 @@
 .jumbotron {
+
   background-color: #1DCACE;
   color: black;
   margin-top: 50px;
   margin-bottom: 10px; 
+ 
+}
+
+a {
+    color: black;
 }
 
 footer{
     background-color: lightgray;
-    clear: left;
+
     padding: 15px 15px 15px;
     margin-top: 10px;
     margin-bottom: 0px; 
@@ -15,6 +21,7 @@ footer{
 
 
 .container {
+
     margin-top: 50px;
     margin-bottom: 0px;
 }
