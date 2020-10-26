@@ -20,7 +20,7 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
-                  <li class="nav-item"><a class="nav-link" href="./inicio">Inicio</a></li>
+                  <li class="nav-item"><a class="nav-link" href="./index">Inicio</a></li>
                   <li class="nav-item active"><a class="nav-link" href="./encargos.html">Encargos</a></li>
                   <li class="nav-item"><a class="nav-link" href="./eventos.html">Eventos</a></li>
                   <li class="nav-item"><a class="nav-link" href="./politica y condiciones.html">Política y Condiciones</a></li>
@@ -33,52 +33,81 @@
       <div class="jumbotron">
           <h1>Dulce Capricho</h1>
       </div>
-          <article>
-        <section>
-            <h2>Mesas dulces</h2>
-            <ul>
-                <li>Objeto 1</li>
-                <li>Objeto 2</li>
-                <li>Objeto 3</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Mesas saladas</h2>
-            <ul>
-                <li>Objeto 1</li>
-                <li>Objeto 2</li>
-                <li>Objeto 3</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Tartas</h2>
-            <ul>
-                <li>Objeto 1</li>
-                <li>Objeto 2</li>
-                <li>Objeto 3</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Galletas</h2>
-            <ul>
-                <li>Objeto 1</li>
-                <li>Objeto 2</li>
-                <li>Objeto 3</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Cupcakes y popcakes</h2>
-            <ul>
-                <li>Objeto 1</li>
-                <li>Objeto 2</li>
-                <li>Objeto 3</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Solicitar presupuesto</h2>
-            <button type="submit" class="btn btn-primary">Enviar</button>
-        </section>
-    </article>
+      <article>
+          <div id="carouselControls" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                  <div class="carousel-item active">
+                      <img class="d-block w-100" src="imagenes/carrousel-dc-popcakes-1.png" alt="Primer slide" />
+                  </div>
+                  <div class="carousel-item">
+                      <img class="d-block w-100" src="imagenes/carrousel-dc-cupcakes-1.png" alt="Segundo slide" />
+                  </div>
+                  <div class="carousel-item">
+                      <img class="d-block w-100" src="imagenes/carrousel-dc-cake-1.png" alt="Tercer slide" />
+                  </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Anterior</span>
+              </a>
+
+              <a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Siguiente</span>
+              </a>
+          </div>
+          <div class="form-row">
+              <section>
+                  <div class="form-group col-sm-6">
+                      <h2>Mesas dulces</h2>
+                      <ul>
+                          <li>Objeto 1</li>
+                          <li>Objeto 2</li>
+                          <li>Objeto 3</li>
+                      </ul>
+                  </div>
+              </section>
+              <section>
+                  <div class="form-group col-sm-6">
+                      <h2>Mesas saladas</h2>
+                      <ul>
+                          <li>Objeto 1</li>
+                          <li>Objeto 2</li>
+                          <li>Objeto 3</li>
+                      </ul>
+                  </div>
+              </section>
+          </div>
+          <section>
+              <h2>Tartas</h2>
+              <ul>
+                  <li>Objeto 1</li>
+                  <li>Objeto 2</li>
+                  <li>Objeto 3</li>
+              </ul>
+          </section>
+          <section>
+              <h2>Galletas</h2>
+              <ul>
+                  <li>Objeto 1</li>
+                  <li>Objeto 2</li>
+                  <li>Objeto 3</li>
+              </ul>
+          </section>
+          <section>
+              <h2>Cupcakes y popcakes</h2>
+              <ul>
+                  <li>Objeto 1</li>
+                  <li>Objeto 2</li>
+                  <li>Objeto 3</li>
+              </ul>
+          </section>
+          <section>
+              <h2>Solicitar presupuesto</h2>
+              <textarea id="comentario" class="form-control"></textarea>
+              <button type="submit" class="btn btn-primary">Enviar</button>
+          </section>
+      </article>
 
 
       <!-- Genérico para todas las páginas -->
