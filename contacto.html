@@ -55,37 +55,39 @@
             <div class="form-row">
                 <div class="form-group col-sm-6">
                     <label for="nombre">Nombre</label>
-                    <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre" />
+                    <input type="text" required class="form-control" id="nombre" placeholder="Ingrese su nombre" pattern="([A-Z][a-zA-Z]*)" />
                 </div>
                 <div class="form-group col-sm-6">
                     <label for="apellido">Apellido</label>
-                    <input type="text" class="form-control" id="apellido" placeholder="Ingrese su apellido" />
+                    <input type="text" required class="form-control" id="apellido" placeholder="Ingrese su apellido" pattern="([A-Z][a-zA-Z]*)" />
                 </div>
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Ingrese su email" />
+                <input type="email" required class="form-control" id="email" placeholder="Ingrese su email" />
             </div>
             <div class="form-row">
                 <div class="form-group col-sm-9">
                     <label for="domicilio">Domicilio</label>
-                    <input type="text" class="form-control" id="domicilio" placeholder="Ingrese su domicilio" />
+                    <input type="text" required class="form-control" id="domicilio" placeholder="Ingrese su domicilio" />
                 </div>
                 <div class="form-group col-sm-3">
                     <label for="codigo postal">Codigo postal</label>
-                    <input type="text" class="form-control" id="CP" placeholder="Ingrese su codigo postal" />
+                    <input type="text" required class="form-control" id="CP" placeholder="Ingrese su codigo postal" />
                 </div>
             </div>
 
             <div class="form-row">
                 <div class="form-group col-sm-2">
                     <label for="comentario">Fecha de entrega</label>
-                    <input type="text" class="form-control" id="fecha" placeholder="00/00/0000" />
+                    <input type="text" required class="form-control" id="fecha" placeholder="00/00/0000" pattern="^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[13-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$"
+                    />
+
                 </div>
             </div>
             <div class="form-group">
                 <label for="comentario">Comentario</label>
-                <textarea id="comentario" class="form-control"></textarea>
+                <textarea id="comentario" rows="5" class="form-control"></textarea>
             </div>
             <div class="form-group">
                 <div class="form-check">
@@ -93,7 +95,9 @@
                     <label class="form-check-label" for="gridCheck">Quiero que me contacten</label>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary">Enviar</button>
+            <button type="submit" onclick="submitFunction()" class="btn btn-primary">Enviar</button>
+
+
         </form>
     </div>
 
@@ -130,6 +134,11 @@
     <script src="node_modules/popper.js/dist/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
+
+    <script src="script.js"></script>
 </body>
+
+
+
 
 </html>
