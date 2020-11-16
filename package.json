@@ -2,7 +2,7 @@
   "name": "daw-i-g4",
   "version": "1.0.0",
   "description": "",
-  "main": "inicio.html",
+  "main": "index.html",
   "scripts": {
     "dev": "lite-server",
     "test": "echo \"Error: no test specified\" && exit 1"
