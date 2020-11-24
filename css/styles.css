@@ -28,7 +28,9 @@ h2 {
     font-family: fantasy;
 }
 
-
+h2.pyc{
+    text-align: center;
+}
 
 .card-comida{
 
@@ -37,4 +39,34 @@ h2 {
     margin-bottom: 10px;
 }
 
+.card-pyc{
+    margin-right: 2px;
+    margin-bottom: 10px;
+}
 
+svg.pe{
+    width: 1.25em;
+    height: 1.25em;
+}
+
+/* Control de iconos de Politica y Condiciones */
+@media(min-width: 992px){
+    svg.presupuesto{
+        width: 8em;
+        height: 8em;
+    }
+}
+
+@media(min-width: 768px) and (max-width: 991px){
+    svg.presupuesto{
+        width: 5em;
+        height: 5em;
+    }
+}
+
+@media(max-width: 767px){
+    svg.presupuesto{
+        width: 4em;
+        height: 4em;
+    }
+}
