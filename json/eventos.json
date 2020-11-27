@@ -1,62 +1,66 @@
 {
-    "results": [{
-            "nombreEvento": "boda",
+    "Eventos": [{
+            "nombreEvento": "Boda",
 
-            "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "descripcion": "Asegúrate que uno de los mejores días de tu vida salga lo mejor posible con nuestra variedad de dulces y mesas.",
 
-            "foto1": "imagenes/encargos-boda-1.jpg",
+            "foto1": "imagenes/eventos/boda4.jpg",
 
-            "foto2": "imagenes/test-carrusel.png",
+            "foto2": "imagenes/eventos/bodas1.jpg",
 
-            "precio": "200"
+            "foro3": "imagenes/eventos/boda5.jpg"
+
+
         },
 
         {
-            "nombreEvento": "bautizo",
+            "nombreEvento": "Bautizo",
 
-            "descripcion": "",
+            "descripcion": "Un momento que sólo pasa una vez en la vida, con nuestra ayuda será un evento aún mejor.",
 
-            "foto1": "",
+            "foto1": "imagenes/eventos/bautizo2.jpg",
 
-            "foto2": "",
+            "foto2": "imagenes/eventos/bautizo3.jpg",
 
-            "precio": ""
+            "foro3": "imagenes/eventos/bautizo1.jpg"
+
+
         },
 
         {
-            "nombreEvento": "comunión",
+            "nombreEvento": "Comunión",
 
-            "descripcion": "",
+            "descripcion": "Lorem Ipsum",
 
-            "foto1": "",
+            "foto1": "imagenes/eventos/comunion1.jpg",
 
-            "foto2": "",
+            "foto2": "imagenes/eventos/comunion2.png",
 
-            "precio": ""
+            "foro3": "imagenes/eventos/comunion3.jpg"
         },
 
         {
-            "nombreEvento": "cumpleaños",
+            "nombreEvento": "Cumpleaños",
 
-            "descripcion": "",
+            "descripcion": "Cuando cumplas años o cualquier día, nosotros siempre te damos alegría.",
 
-            "foto1": "",
+            "foto1": "imagenes/eventos/cumple5.jpg",
 
-            "foto2": "",
+            "foto2": "imagenes/eventos/cumple2.jpg",
 
-            "precio": ""
+            "foro3": "imagenes/eventos/cumple1.jpg"
         },
 
         {
-            "nombreEvento": "baby showers",
+            "nombreEvento": "Baby showers",
 
-            "descripcion": "",
+            "descripcion": "Celebra y comparte la dulce espera rodeada de dulzuras. Un día que será difícil de olvidar.",
 
-            "foto1": "",
+            "foto1": "imagenes/eventos/bs5.jpg",
 
-            "foto2": "",
+            "foto2": "imagenes/eventos/bs6.jpg",
 
-            "precio": ""
+            "foro3": "imagenes/eventos/bs7.jpg"
         }
     ]
 
