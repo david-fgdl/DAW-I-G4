@@ -18,6 +18,7 @@ function eventosLoad(){
         for (var i = 0; i < eventos.length; i++) {
             const myArticle = document.createElement('article');
             const myH2 = document.createElement('h2');
+            myH2.setAttribute("class", "evnt");
             const myPara1 = document.createElement('p');
             const myPara2 = document.createElement('img');
             const myPara3 = document.createElement('img');
@@ -28,7 +29,7 @@ function eventosLoad(){
             myPara1.textContent = eventos[i].descripcion;
             myPara2.textContent = eventos[i].foto1;
             myPara3.textContent = eventos[i].foto2;
-            myPara4.textContent = eventos[i].precio;
+            myPara4.textContent = 'Precio: ' + eventos[i].precio + '€';
                 
             myArticle.appendChild(myH2);
             myArticle.appendChild(myPara1);
