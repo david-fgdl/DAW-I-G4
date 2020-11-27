@@ -1,16 +1,6 @@
 
 function submitContacto(e) {
-    //e.preventDefault();
-    /*
-    var nombre = document.getElementById("nombre").value;
-    var apellido = document.getElementById("apellido").value;
-    var email = document.getElementById("email").value;
-    var domicilio = document.getElementById("domicilio").value;
-    var codigoPostal = document.getElementById("CP").value;
-    var fecha = document.getElementById("fecha").value;
-    var comentario = document.getElementById("comentario").value;
-
-    */
+    
     var nombre = $("#nombre").val();
     var apellido = $("#apellido").val();
     var email = $("#email").val();
@@ -30,28 +20,9 @@ function submitContacto(e) {
     localStorage.comentario = comentario;
     localStorage.tupedido = tupedido;
 
-    //clearData();
-    /*
-    comments = document.querySelector("#comentario");
     
-    comments.value = "Name: (" + nombre + ")\n";
-    comments.value += "Surname: (" + apellido + ")\n";
-    comments.value += "Email: (" + email + ")\n";
-    comments.value += "Address: (" + domicilio + ")\n";
-    */
 }
 
-function clearData() {
-    console.log("clearing data...");
-
-    localStorage.removeItem("nombre");
-    localStorage.removeItem("apellido");
-    localStorage.removeItem("email");
-    localStorage.removeItem("domicilio");
-    localStorage.removeItem("codigoPostal");
-    localStorage.removeItem("fecha");
-    localStorage.removeItem("comentario");
-}
 
 
 function añadirMesasDulces(){
