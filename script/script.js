@@ -155,7 +155,7 @@ function añadirPopcakes(){
 function miPedido(){
     var pedidoCompleto = $("#mipedido").val();
     localStorage.pedidoCompleto = pedidoCompleto;
-    document.location.href = "/contacto.html";
+    document.location.href = "./contacto.html";
 }
 
 function initContacto(){
