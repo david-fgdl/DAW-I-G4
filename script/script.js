@@ -110,6 +110,19 @@ function añadirMesasDulces(){
     var strsave = $("#mipedido").val();
     $("#mipedido").val(strsave + "\n");
 
+    $("#celebracionEscogida").val("");
+    $("#tema").val("");
+    $("#numeroAlfajores").val("");
+    $("#numeroBerlinas").val("");
+    $("#numeroTrufas").val("");
+    $("#numeroAlmendrados").val("");
+    $("#numeroBombones").val("");
+    $("#numeroMacarons").val("");
+    $("#numeroBrownies").val("");
+
+
+
+    
 }
 
 function añadirTartas(){
@@ -132,6 +145,7 @@ function añadirTartas(){
     }else{
         $("#mipedido").val(stringguardada + "Tartas. Número de personas: " +  tartaNumPersonas + "; Sabor del bizcocho " + tartaElegida + "; Buttercream: "+  tartaButtercreamElegida + " \n");
     }
+    $("#personasTarta").val("");
 }
 
 
@@ -160,6 +174,9 @@ function añadirGalletas(){
         $("#mipedido").val(stringguardada + "Galletas. Número: " +  galletasNumero + "; Tamaño: " + galletasTamaño + "; Sabor: "+  galletasSabor + "; Decorado: " + galletasDecorado + "\n");
     }
 
+    $("#numeroGalletas").val("");
+    $("#galletas-decorado").val("");
+    
 }
 
 function añadirCupcakes(){
@@ -182,6 +199,7 @@ function añadirCupcakes(){
     }else{
         $("#mipedido").val(stringguardada + "Cupcakes. Número: " +  cupcakesNumero + "; Tamaño: " + cupcakesTamaño + "; Sabor: "+  cupcakesSabor + "; Buttercream: " + cupcakesButtercream + "\n");
     }
+    $("#numeroCupcakes").val("");
 }
 
 function añadirPopcakes(){
@@ -202,7 +220,7 @@ function añadirPopcakes(){
     }else{
         $("#mipedido").val(stringguardada + "Popcakes. Número: " +  popcakesNumero + "; Sabor: " + popcakesSabor + "\n");
     }
-    
+    $("#numeroPopcakes").val("");
     
 }
 
