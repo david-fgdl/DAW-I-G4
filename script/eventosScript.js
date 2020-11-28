@@ -64,6 +64,11 @@ function eventosLoad(){
             controlAnt.setAttribute("data-slide", "prev");
             myCarrousel.appendChild(controlAnt);
 
+            botonAnt = document.createElement('span');
+            botonAnt.setAttribute("class", "carousel-control-prev-icon");
+            botonAnt.setAttribute("aria-hidden", "true");
+            controlAnt.appendChild(botonAnt);
+
             controlSig = document.createElement('a');
             controlSig.setAttribute("class", "carousel-control-next");
             controlSig.setAttribute("href", "#carouselControls" + eventos[i].nombreEvento);
@@ -71,15 +76,10 @@ function eventosLoad(){
             controlSig.setAttribute("data-slide", "next");
             myCarrousel.appendChild(controlSig);
             
-            /* botonAnt = document.createElement('span');
-            controlAnt.setAttribute("class", "carousel-control-prev-icon");
-            controlAnt.setAttribute("aria-hidden", "true");
-            controlAnt.appendChild(botonAnt);
-
             botonSig = document.createElement('span');
             botonSig.setAttribute("class", "carousel-control-next-icon");
             botonSig.setAttribute("aria-hidden", "true");
-            controlAnt.appendChild(controlSig); */
+            controlSig.appendChild(botonSig);
 
             
             myArticle.appendChild(myH2);
