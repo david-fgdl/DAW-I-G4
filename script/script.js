@@ -55,6 +55,7 @@ function añadirMesasDulces(){
     var numTrufas = $("#numeroTrufas").val();
     var numBombones = $("#numeroBombones").val();
 
+    var pedidoantes = $("#mipedido").val();
     var stringguardada = $("#mipedido").val();
     
     $("#mipedido").val(stringguardada + "Mesas dulces \n - Celebración: " +  celebracionEscogida + "\n - Tema de celebración: " + temaCelebración + "\n - Contenido: ");
@@ -63,8 +64,15 @@ function añadirMesasDulces(){
 
     var numEscogodias = 0;
 
+    
+    console.log(pedidoantes);
+
+   
+
     if(temaCelebración==""){
         alert("Escribe el tema de celebración que desees para la mesa.");
+        $("#mipedido").val(pedidoantes);
+        
         return;
     }
     for(i=0;i<opcionesEscogidas.length+1;i++){
@@ -74,9 +82,11 @@ function añadirMesasDulces(){
         }
     }
     console.log(numEscogodias);
-
+    
     if(numEscogodias < 24){
+        
         alert("Has seleccionado un total de " + numEscogodias + ". El total de productos escogidos debe de ser mínimo 24. Para que los productos cuenten, tienen que haber mínimo 6 del mismo tipo");
+        $("#mipedido").val(pedidoantes);
         return;
     }
     
@@ -228,6 +238,8 @@ function añadirMesasDulces(){
     var strsave = $("#mipedido").val();
     $("#mipedido").val(strsave + "\n");
 
+    
+
     $("#celebracionEscogida").val("");
     $("#tema").val("");
     $("#numeroAlfajores").val("");
@@ -237,7 +249,7 @@ function añadirMesasDulces(){
     $("#numeroBombones").val("");
     $("#numeroMacarons").val("");
     $("#numeroBrownies").val("");
-
+    
 
 
     
@@ -283,7 +295,9 @@ function añadirGalletas(){
     
     if(galletasDecorado==""){
         alert("Describe el decorado que quieres para las galletas, si no deseas ninguno en concreto escribe 'básico' ")
+        return;
     }
+    console.log("llega");
     var stringguardada = $("#mipedido").val();
     
     if($("#gridCheck-galletas").is(":checked")){
