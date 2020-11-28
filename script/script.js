@@ -249,7 +249,7 @@ function añadirTartas(){
     var tartaButtercreamElegida = $("#tarta-buttercream").val();
 
     if(tartaNumPersonas==""){
-        alert("Introduce número de cupcakes");
+        alert("Introduce número de personas para la tarta");
         return;
     }else if(tartaNumPersonas<15){
         alert("Debes añadir un mínimo de 15 unidades");
@@ -274,7 +274,7 @@ function añadirGalletas(){
     var galletasDecorado = $("#galletas-decorado").val();
 
     if(galletasNumero==""){
-        alert("Introduce número de cupcakes");
+        alert("Introduce número de galletas");
         return;
     }else if(galletasNumero<15){
         alert("Debes añadir mínimo de 15 unidades");
