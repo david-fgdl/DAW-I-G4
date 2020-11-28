@@ -277,7 +277,7 @@ function añadirGalletas(){
         alert("Introduce número de galletas");
         return;
     }else if(galletasNumero<15){
-        alert("Debes añadir mínimo de 15 unidades");
+        alert("Debes añadir un mínimo de 15 unidades");
         return;
     }
     
@@ -307,7 +307,7 @@ function añadirCupcakes(){
         alert("Introduce número de cupcakes");
         return;
     }else if(cupcakesNumero<15){
-        alert("Debes añadir mínimo de 15 unidades");
+        alert("Debes añadir un mínimo de 15 unidades");
         return;
     }
 
