@@ -1,13 +1,23 @@
+.navbar{
+    width: 100%;
+}
+.carouselImg{
+    width: 100%;
+}
 .jumbotron {
     background-color: #1DCACE;
     color: black;
     margin-top: 50px;
     margin-bottom: 10px;
-    width: 100vw;
+    width: 100%;
 }
 
 a {
     color: black;
+}
+
+p{
+    text-align: justify;
 }
 
 footer {
@@ -15,11 +25,15 @@ footer {
     padding: 15px 15px 15px;
     margin-top: 10px;
     margin-bottom: 0px;
-    width: 100vw;
+    width: 100%;
 }
 
+.p-footer{
+    text-align: center;
+}
 .container {
     margin-top: 50px;
+    width: 100%;
 }
 
 

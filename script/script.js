@@ -1,16 +1,6 @@
 
 function submitContacto(e) {
-    //e.preventDefault();
-    /*
-    var nombre = document.getElementById("nombre").value;
-    var apellido = document.getElementById("apellido").value;
-    var email = document.getElementById("email").value;
-    var domicilio = document.getElementById("domicilio").value;
-    var codigoPostal = document.getElementById("CP").value;
-    var fecha = document.getElementById("fecha").value;
-    var comentario = document.getElementById("comentario").value;
-
-    */
+    
     var nombre = $("#nombre").val();
     var apellido = $("#apellido").val();
     var email = $("#email").val();
@@ -30,28 +20,10 @@ function submitContacto(e) {
     localStorage.comentario = comentario;
     localStorage.tupedido = tupedido;
 
-    //clearData();
-    /*
-    comments = document.querySelector("#comentario");
     
-    comments.value = "Name: (" + nombre + ")\n";
-    comments.value += "Surname: (" + apellido + ")\n";
-    comments.value += "Email: (" + email + ")\n";
-    comments.value += "Address: (" + domicilio + ")\n";
-    */
+
 }
 
-function clearData() {
-    console.log("clearing data...");
-
-    localStorage.removeItem("nombre");
-    localStorage.removeItem("apellido");
-    localStorage.removeItem("email");
-    localStorage.removeItem("domicilio");
-    localStorage.removeItem("codigoPostal");
-    localStorage.removeItem("fecha");
-    localStorage.removeItem("comentario");
-}
 
 
 function añadirMesasDulces(){
@@ -71,6 +43,26 @@ function añadirMesasDulces(){
     $("#mipedido").val(stringguardada + "Mesas dulces. Celebración: " +  celebracionEscogida + "; Tema de celebración: " + temaCelebración + "; ");
 
     var opcionesEscogidas = [numMacarons, numAlfajores, numBerlinas, numBrownies, numAlmendrados, numTrufas, numBombones];
+
+    var numEscogodias = 0;
+
+    if(temaCelebración==""){
+        alert("Escribe el tema de celebración que desees para la mesa.");
+        return;
+    }
+    for(i=0;i<opcionesEscogidas.length+1;i++){
+        if(parseInt(opcionesEscogidas[i],10)>=6){
+            numEscogodias += parseInt(opcionesEscogidas[i],10);
+            console.log(numEscogodias);
+        }
+    }
+    console.log(numEscogodias);
+
+    if(numEscogodias < 24){
+        alert("Has seleccionado un total de " + numEscogodias + ". El total de productos escogidos debe de ser mínimo 24. Para que los productos cuenten, tienen que haber mínimo 6 del mismo tipo");
+        return;
+    }
+    
 
     for(i=0 ; i<opcionesEscogidas.length+1; i++){
         
@@ -118,6 +110,19 @@ function añadirMesasDulces(){
     var strsave = $("#mipedido").val();
     $("#mipedido").val(strsave + "\n");
 
+    $("#celebracionEscogida").val("");
+    $("#tema").val("");
+    $("#numeroAlfajores").val("");
+    $("#numeroBerlinas").val("");
+    $("#numeroTrufas").val("");
+    $("#numeroAlmendrados").val("");
+    $("#numeroBombones").val("");
+    $("#numeroMacarons").val("");
+    $("#numeroBrownies").val("");
+
+
+
+    
 }
 
 function añadirTartas(){
@@ -125,14 +130,22 @@ function añadirTartas(){
     var tartaElegida = $("#tarta-bizcocho").val();
     var tartaButtercreamElegida = $("#tarta-buttercream").val();
 
-
+    if(tartaNumPersonas==""){
+        alert("Introduce número de cupcakes");
+        return;
+    }else if(tartaNumPersonas<15){
+        alert("Debes añadir un mínimo de 15 unidades");
+        return;
+    }
+    
     var stringguardada = $("#mipedido").val();
     
     if($("#gridCheck-tarta").is(":checked")){
-        $("#mipedido").val(stringguardada + "Tartas. Número de personas: " +  tartaNumPersonas + "; Tarta elegida: " + tartaElegida + "; Buttercream: "+  tartaButtercreamElegida + " *PARA MESA \n");
+        $("#mipedido").val(stringguardada + "Tartas. Número de personas: " +  tartaNumPersonas + "; Sabor del bizcocho " + tartaElegida + "; Buttercream: "+  tartaButtercreamElegida + " *PARA MESA \n");
     }else{
-        $("#mipedido").val(stringguardada + "Tartas. Número de personas: " +  tartaNumPersonas + "; Tarta elegida: " + tartaElegida + "; Buttercream: "+  tartaButtercreamElegida + " \n");
+        $("#mipedido").val(stringguardada + "Tartas. Número de personas: " +  tartaNumPersonas + "; Sabor del bizcocho " + tartaElegida + "; Buttercream: "+  tartaButtercreamElegida + " \n");
     }
+    $("#personasTarta").val("");
 }
 
 
@@ -141,7 +154,18 @@ function añadirGalletas(){
     var galletasTamaño = $("#galletas-tamaño").val();
     var galletasSabor = $("#galletas-sabor").val();
     var galletasDecorado = $("#galletas-decorado").val();
+
+    if(galletasNumero==""){
+        alert("Introduce número de cupcakes");
+        return;
+    }else if(galletasNumero<15){
+        alert("Debes añadir mínimo de 15 unidades");
+        return;
+    }
     
+    if(galletasDecorado==""){
+        alert("Describe el decorado que quieres para las galletas, si no deseas ninguno en concreto escribe 'básico' ")
+    }
     var stringguardada = $("#mipedido").val();
     
     if($("#gridCheck-galletas").is(":checked")){
@@ -150,6 +174,9 @@ function añadirGalletas(){
         $("#mipedido").val(stringguardada + "Galletas. Número: " +  galletasNumero + "; Tamaño: " + galletasTamaño + "; Sabor: "+  galletasSabor + "; Decorado: " + galletasDecorado + "\n");
     }
 
+    $("#numeroGalletas").val("");
+    $("#galletas-decorado").val("");
+    
 }
 
 function añadirCupcakes(){
@@ -158,12 +185,21 @@ function añadirCupcakes(){
     var cupcakesSabor = $("#cupcakes-sabor").val();
     var cupcakesButtercream = $("#cupcakes-buttercream").val();
 
+    if(cupcakesNumero==""){
+        alert("Introduce número de cupcakes");
+        return;
+    }else if(cupcakesNumero<15){
+        alert("Debes añadir mínimo de 15 unidades");
+        return;
+    }
+
     var stringguardada = $("#mipedido").val();
     if($("#gridCheck-cup-cakes").is(":checked")){
         $("#mipedido").val(stringguardada + "Cupcakes. Número: " +  cupcakesNumero + "; Tamaño: " + cupcakesTamaño + "; Sabor: "+  cupcakesSabor + "; Buttercream: " + cupcakesButtercream + " *PARA MESA \n");
     }else{
         $("#mipedido").val(stringguardada + "Cupcakes. Número: " +  cupcakesNumero + "; Tamaño: " + cupcakesTamaño + "; Sabor: "+  cupcakesSabor + "; Buttercream: " + cupcakesButtercream + "\n");
     }
+    $("#numeroCupcakes").val("");
 }
 
 function añadirPopcakes(){
@@ -171,20 +207,27 @@ function añadirPopcakes(){
     var popcakesNumero = $("#numeroPopcakes").val();
     var popcakesSabor= $("#popcakes-sabor").val();
 
+    if(popcakesNumero==""){
+        alert("Introduce el número de popcakes");
+        return;
+    }else if(popcakesNumero<15){
+        alert("Debes añadir un mínimo de 15 unidades");
+        return;
+    }
     var stringguardada = $("#mipedido").val();
     if($("#gridCheck-pop-cakes").is(":checked")){
         $("#mipedido").val(stringguardada + "Popcakes. Número: " +  popcakesNumero + "; Sabor: " + popcakesSabor + "*PARA MESA \n");
     }else{
         $("#mipedido").val(stringguardada + "Popcakes. Número: " +  popcakesNumero + "; Sabor: " + popcakesSabor + "\n");
     }
-    
+    $("#numeroPopcakes").val("");
     
 }
 
 function miPedido(){
     var pedidoCompleto = $("#mipedido").val();
     localStorage.pedidoCompleto = pedidoCompleto;
-    document.location.href = "/contacto.html";
+    document.location.href = "./contacto.html";
 }
 
 function initContacto(){
