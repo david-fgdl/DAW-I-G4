@@ -57,7 +57,7 @@ function añadirMesasDulces(){
 
     var stringguardada = $("#mipedido").val();
     
-    $("#mipedido").val(stringguardada + "Mesas dulces. Celebración: " +  celebracionEscogida + "; Tema de celebración: " + temaCelebración + "; ");
+    $("#mipedido").val(stringguardada + "Mesas dulces \n - Celebración: " +  celebracionEscogida + "\n - Tema de celebración: " + temaCelebración + "\n - Contenido: ");
 
     var opcionesEscogidas = [numMacarons, numAlfajores, numBerlinas, numBrownies, numAlmendrados, numTrufas, numBombones];
 
@@ -259,9 +259,9 @@ function añadirTartas(){
     var stringguardada = $("#mipedido").val();
     
     if($("#gridCheck-tarta").is(":checked")){
-        $("#mipedido").val(stringguardada + "Tartas. Número de personas: " +  tartaNumPersonas + "; Sabor del bizcocho " + tartaElegida + "; Buttercream: "+  tartaButtercreamElegida + " *PARA MESA \n");
+        $("#mipedido").val(stringguardada + "Tartas *PARA MESA\n - Número de personas: " +  tartaNumPersonas + "\n - Sabor del bizcocho: " + tartaElegida + "\n - Buttercream: "+  tartaButtercreamElegida + "\n");
     }else{
-        $("#mipedido").val(stringguardada + "Tartas. Número de personas: " +  tartaNumPersonas + "; Sabor del bizcocho " + tartaElegida + "; Buttercream: "+  tartaButtercreamElegida + " \n");
+        $("#mipedido").val(stringguardada + "Tartas\n - Número de personas: " +  tartaNumPersonas + "\n - Sabor del bizcocho: " + tartaElegida + "\n - Buttercream: "+  tartaButtercreamElegida + "\n");
     }
     $("#personasTarta").val("");
 }
@@ -287,9 +287,9 @@ function añadirGalletas(){
     var stringguardada = $("#mipedido").val();
     
     if($("#gridCheck-galletas").is(":checked")){
-        $("#mipedido").val(stringguardada + "Galletas. Número: " +  galletasNumero + "; Tamaño: " + galletasTamaño + "; Sabor: "+  galletasSabor + "; Decorado: " + galletasDecorado + " *PARA MESA \n");
+        $("#mipedido").val(stringguardada + "Galletas *PARA MESA \n - Número: " +  galletasNumero + "\n - Tamaño: " + galletasTamaño + "\n - Sabor: "+  galletasSabor + "\n - Decorado: " + galletasDecorado + "\n");
     }else{
-        $("#mipedido").val(stringguardada + "Galletas. Número: " +  galletasNumero + "; Tamaño: " + galletasTamaño + "; Sabor: "+  galletasSabor + "; Decorado: " + galletasDecorado + "\n");
+        $("#mipedido").val(stringguardada + "Galletas\n - Número: " +  galletasNumero + "\n - Tamaño: " + galletasTamaño + "\n - Sabor: "+  galletasSabor + "\n - Decorado: " + galletasDecorado + "\n");
     }
 
     $("#numeroGalletas").val("");
@@ -313,9 +313,9 @@ function añadirCupcakes(){
 
     var stringguardada = $("#mipedido").val();
     if($("#gridCheck-cup-cakes").is(":checked")){
-        $("#mipedido").val(stringguardada + "Cupcakes. Número: " +  cupcakesNumero + "; Tamaño: " + cupcakesTamaño + "; Sabor: "+  cupcakesSabor + "; Buttercream: " + cupcakesButtercream + " *PARA MESA \n");
+        $("#mipedido").val(stringguardada + "Cupcakes *PARA MESA\n - Número: " +  cupcakesNumero + "\n - Tamaño: " + cupcakesTamaño + "\n - Sabor: "+  cupcakesSabor + "\n - Buttercream: " + cupcakesButtercream + "\n");
     }else{
-        $("#mipedido").val(stringguardada + "Cupcakes. Número: " +  cupcakesNumero + "; Tamaño: " + cupcakesTamaño + "; Sabor: "+  cupcakesSabor + "; Buttercream: " + cupcakesButtercream + "\n");
+        $("#mipedido").val(stringguardada + "Cupcakes\n - Número: " +  cupcakesNumero + "\n - Tamaño: " + cupcakesTamaño + "\n - Sabor: "+  cupcakesSabor + "\n - Buttercream: " + cupcakesButtercream + "\n");
     }
     $("#numeroCupcakes").val("");
 }
@@ -334,9 +334,9 @@ function añadirPopcakes(){
     }
     var stringguardada = $("#mipedido").val();
     if($("#gridCheck-pop-cakes").is(":checked")){
-        $("#mipedido").val(stringguardada + "Popcakes. Número: " +  popcakesNumero + "; Sabor: " + popcakesSabor + "*PARA MESA \n");
+        $("#mipedido").val(stringguardada + "Popcakes *PARA MESA\n - Número: " +  popcakesNumero + "\n - Sabor: " + popcakesSabor + "\n");
     }else{
-        $("#mipedido").val(stringguardada + "Popcakes. Número: " +  popcakesNumero + "; Sabor: " + popcakesSabor + "\n");
+        $("#mipedido").val(stringguardada + "Popcakes\n - Número: " +  popcakesNumero + "\n - Sabor: " + popcakesSabor + "\n");
     }
     $("#numeroPopcakes").val("");
     
