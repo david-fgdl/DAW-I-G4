@@ -21,6 +21,7 @@ function submitContacto(e) {
     localStorage.tupedido = tupedido;
 
     
+
 }
 
 
@@ -42,6 +43,26 @@ function añadirMesasDulces(){
     $("#mipedido").val(stringguardada + "Mesas dulces. Celebración: " +  celebracionEscogida + "; Tema de celebración: " + temaCelebración + "; ");
 
     var opcionesEscogidas = [numMacarons, numAlfajores, numBerlinas, numBrownies, numAlmendrados, numTrufas, numBombones];
+
+    var numEscogodias = 0;
+
+    if(temaCelebración==""){
+        alert("Escribe el tema de celebración que desees para la mesa.");
+        return;
+    }
+    for(i=0;i<opcionesEscogidas.length+1;i++){
+        if(parseInt(opcionesEscogidas[i],10)>=6){
+            numEscogodias += parseInt(opcionesEscogidas[i],10);
+            console.log(numEscogodias);
+        }
+    }
+    console.log(numEscogodias);
+
+    if(numEscogodias < 24){
+        alert("Has seleccionado un total de " + numEscogodias + ". El total de productos escogidos debe de ser mínimo 24. Para que los productos cuenten, tienen que haber mínimo 6 del mismo tipo");
+        return;
+    }
+    
 
     for(i=0 ; i<opcionesEscogidas.length+1; i++){
         
@@ -96,13 +117,20 @@ function añadirTartas(){
     var tartaElegida = $("#tarta-bizcocho").val();
     var tartaButtercreamElegida = $("#tarta-buttercream").val();
 
-
+    if(tartaNumPersonas==""){
+        alert("Introduce número de cupcakes");
+        return;
+    }else if(tartaNumPersonas<15){
+        alert("Debes añadir un mínimo de 15 unidades");
+        return;
+    }
+    
     var stringguardada = $("#mipedido").val();
     
     if($("#gridCheck-tarta").is(":checked")){
-        $("#mipedido").val(stringguardada + "Tartas. Número de personas: " +  tartaNumPersonas + "; Tarta elegida: " + tartaElegida + "; Buttercream: "+  tartaButtercreamElegida + " *PARA MESA \n");
+        $("#mipedido").val(stringguardada + "Tartas. Número de personas: " +  tartaNumPersonas + "; Sabor del bizcocho " + tartaElegida + "; Buttercream: "+  tartaButtercreamElegida + " *PARA MESA \n");
     }else{
-        $("#mipedido").val(stringguardada + "Tartas. Número de personas: " +  tartaNumPersonas + "; Tarta elegida: " + tartaElegida + "; Buttercream: "+  tartaButtercreamElegida + " \n");
+        $("#mipedido").val(stringguardada + "Tartas. Número de personas: " +  tartaNumPersonas + "; Sabor del bizcocho " + tartaElegida + "; Buttercream: "+  tartaButtercreamElegida + " \n");
     }
 }
 
@@ -112,7 +140,18 @@ function añadirGalletas(){
     var galletasTamaño = $("#galletas-tamaño").val();
     var galletasSabor = $("#galletas-sabor").val();
     var galletasDecorado = $("#galletas-decorado").val();
+
+    if(galletasNumero==""){
+        alert("Introduce número de cupcakes");
+        return;
+    }else if(galletasNumero<15){
+        alert("Debes añadir mínimo de 15 unidades");
+        return;
+    }
     
+    if(galletasDecorado==""){
+        alert("Describe el decorado que quieres para las galletas, si no deseas ninguno en concreto escribe 'básico' ")
+    }
     var stringguardada = $("#mipedido").val();
     
     if($("#gridCheck-galletas").is(":checked")){
@@ -129,6 +168,14 @@ function añadirCupcakes(){
     var cupcakesSabor = $("#cupcakes-sabor").val();
     var cupcakesButtercream = $("#cupcakes-buttercream").val();
 
+    if(cupcakesNumero==""){
+        alert("Introduce número de cupcakes");
+        return;
+    }else if(cupcakesNumero<15){
+        alert("Debes añadir mínimo de 15 unidades");
+        return;
+    }
+
     var stringguardada = $("#mipedido").val();
     if($("#gridCheck-cup-cakes").is(":checked")){
         $("#mipedido").val(stringguardada + "Cupcakes. Número: " +  cupcakesNumero + "; Tamaño: " + cupcakesTamaño + "; Sabor: "+  cupcakesSabor + "; Buttercream: " + cupcakesButtercream + " *PARA MESA \n");
@@ -142,6 +189,13 @@ function añadirPopcakes(){
     var popcakesNumero = $("#numeroPopcakes").val();
     var popcakesSabor= $("#popcakes-sabor").val();
 
+    if(popcakesNumero==""){
+        alert("Introduce el número de popcakes");
+        return;
+    }else if(popcakesNumero<15){
+        alert("Debes añadir un mínimo de 15 unidades");
+        return;
+    }
     var stringguardada = $("#mipedido").val();
     if($("#gridCheck-pop-cakes").is(":checked")){
         $("#mipedido").val(stringguardada + "Popcakes. Número: " +  popcakesNumero + "; Sabor: " + popcakesSabor + "*PARA MESA \n");
