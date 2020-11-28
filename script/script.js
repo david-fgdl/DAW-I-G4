@@ -10,6 +10,7 @@ function submitContacto(e) {
     var comentario = $("#comentario").val();
     var tupedido = $("#tupedido").val();
 
+    
 
     localStorage.nombre = nombre;
     localStorage.apellido = apellido;
@@ -21,7 +22,23 @@ function submitContacto(e) {
     localStorage.tupedido = tupedido;
 
     
-
+    var toSend={
+        [nombre] : nombre,
+        [apellido] : apellido,
+        [email] : email,
+        [domicilio] : domicilio,
+        [codigoPostal] : codigoPostal,
+        [fecha] : fecha,
+        [comentario] : comentario,
+        [tupedido] : tupedido
+        
+    };
+    var jsonString = JSON.stringify(toSend);
+    console.log(jsonString);
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", "./contactoJSON.json");
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.send(jsonString);
 }
 
 
