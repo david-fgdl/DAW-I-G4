@@ -120,6 +120,107 @@ function añadirMesasDulces(){
                         $("#mipedido").val(stringguardada + "Número de bombones:" +  numBombones + "; ");
                         break;
             }
+        }else{
+            switch(i){
+                case 0: 
+                if(numMacarons == ""){
+                    continue;
+                }else{
+                    if(confirm("Has seleccionado sólo " + opcionesEscogidas[i] + " unidades de Macarons. No se va a añadir al pedido. Acepta si quieres confirmar el pedido sin los Macarons y cancela si quieres editarlo" )){
+                        continue;
+                    }else{
+                        return;
+                    }
+                    break;
+                }
+                        
+
+
+                case 1:
+
+                    if(numAlfajores==""){
+                        continue;
+                    }else{
+                        if(confirm("Has seleccionado sólo " + opcionesEscogidas[i] + " unidades de alfajores. No se va a añadir al pedido. Acepta si quieres confirmar el pedido sin los Macarons y cancela si quieres editarlo" )){
+                            continue;
+                        }else{
+                            return;
+                        }
+                        break;
+                    }
+                    
+
+                case 2:
+                    if(numBerlinas==""){
+                        continue;
+                    }else{
+                        if(confirm("Has seleccionado sólo " + opcionesEscogidas[i] + " unidades de berlinas. No se va a añadir al pedido. Acepta si quieres confirmar el pedido sin los Macarons y cancela si quieres editarlo" )){
+                            continue;
+                        }else{
+                            return;
+                        }
+                        break;
+                    }
+                    
+                
+                
+
+                case 3:
+                    if(numBrownies==""){
+                        continue;
+                    }else{
+                        if(confirm("Has seleccionado sólo " + opcionesEscogidas[i] + " unidades de brownies. No se va a añadir al pedido. Acepta si quieres confirmar el pedido sin los Macarons y cancela si quieres editarlo" )){
+                            continue;
+                        }else{
+                            return;
+                        }
+                        break;
+                    }
+                    
+
+                case 4:
+                    if(numAlmendrados==""){
+                        continue;
+                    }else{
+                        if(confirm("Has seleccionado sólo " + opcionesEscogidas[i] + " unidades de almendrados. No se va a añadir al pedido. Acepta si quieres confirmar el pedido sin los Macarons y cancela si quieres editarlo" )){
+                            continue;
+                        }else{
+                            return;
+                        }
+                        break;
+
+                    }
+                    
+
+                case 5:
+
+                    if(numTrufas==""){
+                        continue;
+                    }else{
+                        if(confirm("Has seleccionado sólo " + opcionesEscogidas[i] + " unidades de trufas. No se va a añadir al pedido. Acepta si quieres confirmar el pedido sin los Macarons y cancela si quieres editarlo" )){
+                            continue;
+                        }else{
+                            return;
+                        }
+                        break;
+
+                    }
+                    
+
+                case 6:
+                    if(numBombones==""){
+                        continue;
+                    }else{
+
+                        if(confirm("Has seleccionado sólo " + opcionesEscogidas[i] + " unidades de bombones. No se va a añadir al pedido. Acepta si quieres confirmar el pedido sin los Macarons y cancela si quieres editarlo" )){
+                            continue;
+                        }else{
+                            return;
+                        }
+                        break;
+                    }
+                    
+            }
         }
     }
 
@@ -243,6 +344,10 @@ function añadirPopcakes(){
 
 function miPedido(){
     var pedidoCompleto = $("#mipedido").val();
+    if(pedidoCompleto == ""){
+        alert("El pedido está vacío. Añade cosas antes de enviar");
+        return;
+    }
     localStorage.pedidoCompleto = pedidoCompleto;
     document.location.href = "./contacto.html";
 }
@@ -255,4 +360,72 @@ function initContacto(){
         
         localStorage.clear();
     }
+}
+
+function redireccionEventos(){
+
+    if($("#mipedido").val()!=""){
+        if(confirm("Si cambias de página sin enviar el pedido, perderás todo lo que hayas seleccionado. Acepta para continuar a la página de eventos o cancela para seguir aquí")){
+            document.location.href="./eventos.html";
+        }else{
+            return;
+        }
+    }else{
+        document.location.href="./eventos.html";
+    }
+    
+}
+
+function redireccionPolitica(){
+    if($("#mipedido").val()!=""){
+        if(confirm("Si cambias de página sin enviar el pedido, perderás todo lo que hayas seleccionado. Acepta para continuar a la página de Política y condiciones o cancela para seguir aquí")){
+            document.location.href="./politica y condiciones.html";
+        }else{
+            return;
+        }
+    }else{
+        document.location.href="./politica y condiciones.html";
+    }
+}
+
+
+function redireccionContacto(){
+    if($("#mipedido").val()!=""){
+        if(confirm("Si cambias de página sin enviar el pedido, perderás todo lo que hayas seleccionado. Acepta para continuar a la página de Contacto o cancela para seguir aquí")){
+            document.location.href="./contacto.html";
+        }else{
+            return;
+        }
+    }else{
+        document.location.href="./contacto.html";
+    }
+}
+
+function redireccionInicio(){
+    if($("#mipedido").val()!=""){
+        if(confirm("Si recargas de página sin enviar el pedido, perderás todo lo que hayas seleccionado. Acepta para ir a la página de inicio o cancela para seguir aquí")){
+            document.location.href="./index.html";
+        }else{
+            return;
+        }
+    }else{
+        document.location.href="./index.html";
+    }
+}
+
+function redireccionEncargos(){
+    if($("#mipedido").val()!=""){
+        if(confirm("Si recargas de página sin enviar el pedido, perderás todo lo que hayas seleccionado. Acepta para recargar la página o cancela para seguir aquí")){
+            document.location.href="./encargos.html";
+        }else{
+            return;
+        }
+    }else{
+        document.location.href="./encargos.html";
+    }
+}
+
+
+function limpiarPedido(){
+    $("#mipedido").val("");
 }
