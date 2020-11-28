@@ -18,7 +18,7 @@ function eventosLoad(){
         for (var i = 0; i < eventos.length; i++) {
             myArticle = document.createElement('article');
             myCarrousel = document.createElement('div');
-            myCarrousel.setAttribute("id", "carouselControls");
+            myCarrousel.setAttribute("id", "carouselControls" + eventos[i].nombreEvento);
             myCarrousel.setAttribute("class", "col-sm-12 offset-md-1 col-md-10 offset-lg-2 col-lg-8 carouselImg carousel slide");
             myCarrousel.setAttribute("data-ride", "carousel");
 
@@ -59,14 +59,14 @@ function eventosLoad(){
 
             controlAnt = document.createElement('a');
             controlAnt.setAttribute("class", "carousel-control-prev");
-            controlAnt.setAttribute("href", "#carouselControls");
+            controlAnt.setAttribute("href", "#carouselControls" + eventos[i].nombreEvento);
             controlAnt.setAttribute("role", "button");
             controlAnt.setAttribute("data-slide", "prev");
             myCarrousel.appendChild(controlAnt);
 
             controlSig = document.createElement('a');
             controlSig.setAttribute("class", "carousel-control-next");
-            controlSig.setAttribute("href", "#carouselControls");
+            controlSig.setAttribute("href", "#carouselControls" + eventos[i].nombreEvento);
             controlSig.setAttribute("role", "button");
             controlSig.setAttribute("data-slide", "next");
             myCarrousel.appendChild(controlSig);

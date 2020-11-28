@@ -8,7 +8,7 @@
 
             "foto2": "imagenes/eventos/bodas1.jpg",
 
-            "foro3": "imagenes/eventos/boda5.jpg"
+            "foto3": "imagenes/eventos/boda5.jpg"
 
 
         },
@@ -22,7 +22,7 @@
 
             "foto2": "imagenes/eventos/bautizo3.jpg",
 
-            "foro3": "imagenes/eventos/bautizo1.jpg"
+            "foto3": "imagenes/eventos/bautizo1.jpg"
 
 
         },
@@ -36,7 +36,7 @@
 
             "foto2": "imagenes/eventos/comunion2.png",
 
-            "foro3": "imagenes/eventos/comunion3.jpg"
+            "foto3": "imagenes/eventos/comunion3.jpg"
         },
 
         {
@@ -48,7 +48,7 @@
 
             "foto2": "imagenes/eventos/cumple2.jpg",
 
-            "foro3": "imagenes/eventos/cumple1.jpg"
+            "foto3": "imagenes/eventos/cumple1.jpg"
         },
 
         {
@@ -60,7 +60,7 @@
 
             "foto2": "imagenes/eventos/bs6.jpg",
 
-            "foro3": "imagenes/eventos/bs7.jpg"
+            "foto3": "imagenes/eventos/bs7.jpg"
         }
     ]
 
